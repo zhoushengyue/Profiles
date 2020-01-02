@@ -95,60 +95,30 @@ Proxy:
 #   rc4-md5 chacha20-ietf xchacha20
 #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
 
-# Shadowsocks
-- name: "1"
-  type: ss
-  server: 1.2.4.8
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
-  # udp: true
-
 # Shadowsocks + simple-obfs
-- name: "2"
+- name: "喵帕斯"
   type: ss
-  server: 1.2.4.8
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
+  server: hk-e.mitsuha-node.com
+  port: 543
+  cipher: AES-256-CTR
+  password: "miaopasi"
   plugin: obfs
   plugin-opts:
     mode: tls # or http
-    # host: bing.com
+    # host: HK2SCH1308321227602.wns.windows.com
 
-# Shadowsocks + v2ray-plugin
-- name: "3"
+# Shadowsocks + simple-obfs
+- name: "喵帕斯-HK HGC-1Gbps"
   type: ss
-  server: 1.2.4.8
+  server: hk-14.mitsuha-node.com
   port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
-  plugin: v2ray-plugin
+  cipher: AES-256-CTR
+  password: "miaopasi"
+  plugin: obfs
   plugin-opts:
-    mode: websocket # no QUIC now
-    # tls: true # wss
-    # skip-cert-verify: true
-    # host: bing.com
-    # path: "/"
-    # mux: true
-    # headers:
-    #   custom: value
+    mode: tls # or http
+    # host: HK2SCH1308321227602.wns.windows.com
 
-# VMess
-- name: "4"
-  type: vmess
-  server: v2ray.cool
-  port: 443
-  uuid: a3482e88-686a-4a58-8126-99c9df64b7bf
-  alterId: 64
-  cipher: auto
-  # udp: true
-  # tls: true
-  # skip-cert-verify: true
-  # network: ws
-  # ws-path: /path
-  # ws-headers:
-  #   Host: v2ray.com
 
 # 其他协议如 Socks5、HTTP、Snell 示例如下
 
